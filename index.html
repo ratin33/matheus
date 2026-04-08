@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mochila Escolar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      background: #333;
+    }
+    nav button {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #555;
+    }
+    section {
+      display: none;
+      padding: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    button.calc-btn {
+      width: 23%;
+      margin: 1%;
+      padding: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mochila Escolar 🎒</h1>
+</header>
+
+<nav>
+  <button onclick="showTab('calc')">Calculadora</button>
+  <button onclick="showTab('notes')">Caderno</button>
+  <button onclick="showTab('agenda')">Agenda</button>
+  <button onclick="showTab('grades')">Boletim</button>
+  <button onclick="showTab('ai')">IA Escolar</button>
+</nav>
+
+<section id="calc" class="active">
+  <h2>Calculadora</h2>
+  <input type="text" id="display" disabled>
+  <div>
+    <button class="calc-btn" onclick="add('7')">7</button>
+    <button class="calc-btn" onclick="add('8')">8</button>
+    <button class="calc-btn" onclick="add('9')">9</button>
+    <button class="calc-btn" onclick="add('/')">÷</button>
+    <button class="calc-btn" onclick="add('4')">4</button>
+    <button class="calc-btn" onclick="add('5')">5</button>
+    <button class="calc-btn" onclick="add('6')">6</button>
+    <button class="calc-btn" onclick="add('*')">×</button>
+    <button class="calc-btn" onclick="add('1')">1</button>
+    <button class="calc-btn" onclick="add('2')">2</button>
+    <button class="calc-btn" onclick="add('3')">3</button>
+    <button class="calc-btn" onclick="add('-')">−</button>
+    <button class="calc-btn" onclick="add('0')">0</button>
+    <button class="calc-btn" onclick="calc()">=</button>
+    <button class="calc-btn" onclick="clearDisplay()">C</button>
+    <button class="calc-btn" onclick="add('+')">+</button>
+  </div>
+</section>
+
+<section id="notes">
+  <h2>Caderno de Anotações</h2>
+  <textarea rows="10" placeholder="Escreva suas anotações..."></textarea>
+</section>
+
+<section id="agenda">
+  <h2>Agenda Escolar</h2>
+  <input type="date">
+  <textarea rows="5" placeholder="Tarefas do dia..."></textarea>
+</section>
+
+<section id="grades">
+  <h2>Boletim</h2>
+  <table>
+    <tr><th>Matéria</th><th>Nota</th></tr>
+    <tr><td>Matemática</td><td><input type="number"></td></tr>
+    <tr><td>Português</td><td><input type="number"></td></tr>
+    <tr><td>Ciências</td><td><input type="number"></td></tr>
+  </table>
+</section>
+
+<section id="ai">
+  <h2>IA Escolar</h2>
+  <input type="text" id="question" placeholder="Faça uma pergunta...">
+  <button onclick="answer()">Perguntar</button>
+  <p id="response"></p>
+</section>
+
+<script>
+function showTab(tab) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+}
+
+function add(value) {
+  document.getElementById('display').value += value;
+}
+
+function calc() {
+  try {
+    document.getElementById('display').value = eval(document.getElementById('display').value);
+  } catch {
+    alert('Erro');
+  }
+}
+
+function clearDisplay() {
+  document.getElementById('display').value = '';
+}
+
+function answer() {
+  let q = document.getElementById('question').value.toLowerCase();
+  let r = 'Não sei responder isso ainda 😅';
+
+  if(q.includes('2+2')) r = '2 + 2 = 4';
+  if(q.includes('capital do brasil')) r = 'Brasília';
+  if(q.includes('quem descobriu o brasil')) r = 'Pedro Álvares Cabral';
+
+  document.getElementById('response').innerText = r;
+}
+</script>
+
+</body>
+</html>
