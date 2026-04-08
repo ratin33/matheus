@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Braille - Página Educativa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+    }
+    h2 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+    th {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sistema Braille</h1>
+  <p>Aprenda o que é e como funciona</p>
+</header>
+
+<main>
+  <h2>O que é o Braille?</h2>
+  <p>
+    O Braille é um sistema de escrita e leitura tátil utilizado por pessoas cegas ou com baixa visão.
+    Ele foi criado por Louis Braille no século XIX e permite que letras, números e símbolos sejam
+    representados por combinações de pontos em relevo.
+  </p>
+
+  <h2>Como funciona?</h2>
+  <p>
+    O sistema Braille é formado por células com até 6 pontos. A combinação desses pontos cria letras
+    e outros caracteres. Cada letra do alfabeto possui uma representação específica.
+  </p>
+
+  <h2>Alfabeto em Braille</h2>
+  <table>
+    <tr>
+      <th>Letra</th>
+      <th>Braille</th>
+    </tr>
+    <tr><td>A</td><td>⠁</td></tr>
+    <tr><td>B</td><td>⠃</td></tr>
+    <tr><td>C</td><td>⠉</td></tr>
+    <tr><td>D</td><td>⠙</td></tr>
+    <tr><td>E</td><td>⠑</td></tr>
+    <tr><td>F</td><td>⠋</td></tr>
+    <tr><td>G</td><td>⠛</td></tr>
+    <tr><td>H</td><td>⠓</td></tr>
+    <tr><td>I</td><td>⠊</td></tr>
+    <tr><td>J</td><td>⠚</td></tr>
+    <tr><td>K</td><td>⠅</td></tr>
+    <tr><td>L</td><td>⠇</td></tr>
+    <tr><td>M</td><td>⠍</td></tr>
+    <tr><td>N</td><td>⠝</td></tr>
+    <tr><td>O</td><td>⠕</td></tr>
+    <tr><td>P</td><td>⠏</td></tr>
+    <tr><td>Q</td><td>⠟</td></tr>
+    <tr><td>R</td><td>⠗</td></tr>
+    <tr><td>S</td><td>⠎</td></tr>
+    <tr><td>T</td><td>⠞</td></tr>
+    <tr><td>U</td><td>⠥</td></tr>
+    <tr><td>V</td><td>⠧</td></tr>
+    <tr><td>W</td><td>⠺</td></tr>
+    <tr><td>X</td><td>⠭</td></tr>
+    <tr><td>Y</td><td>⠽</td></tr>
+    <tr><td>Z</td><td>⠵</td></tr>
+  </table>
+
+  <h2>Curiosidade</h2>
+  <p>
+    O Braille é usado no mundo inteiro, com pequenas adaptações para diferentes idiomas.
+    Ele é essencial para a inclusão e educação de pessoas com deficiência visual.
+  </p>
+</main>
+
+</body>
+</html>
